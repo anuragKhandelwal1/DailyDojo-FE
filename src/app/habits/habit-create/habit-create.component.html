@@ -1,0 +1,27 @@
+<div class="habit-create-container">
+  <h2>Create New Habit</h2>
+
+  <form [formGroup]="habitForm" (ngSubmit)="onSubmit()">
+    <label>
+      Title:
+      <input type="text" formControlName="title">
+    </label>
+    <div *ngIf="habitForm.get('title')?.invalid && habitForm.get('title')?.touched">
+      Title is required.
+    </div>
+
+    <label>
+      Description:
+      <textarea formControlName="description" rows="3"></textarea>
+    </label>
+
+    <label>
+      Frequency:
+      <select formControlName="frequency">
+        <option *ngFor="let freq of frequencies" [value]="freq">{{ freq | titlecase }}</option>
+      </select>
+    </label>
+
+    <button type="submit" [disabled]="habitForm.invalid">Create Habit</button>
+  </form>
+</div>

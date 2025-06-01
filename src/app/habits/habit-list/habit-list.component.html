@@ -1,0 +1,12 @@
+<div *ngIf="habits.length === 0">
+  <p>No habits yet. Add one!</p>
+</div>
+
+<ul>
+  <li *ngFor="let habit of habits">
+    <h3>{{ habit.title }}</h3>
+    <p>{{ habit.description }}</p>
+    <p><em>Frequency: {{ habit.frequency }}</em></p>
+    <button (click)="deleteHabit(habit.id!)">Delete</button>
+  </li>
+</ul>

@@ -1,0 +1,59 @@
+.habit-list-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #34495e;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      background-color: #fefefe;
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .habit-info {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-weight: 700;
+          font-size: 1.1rem;
+          color: #2c3e50;
+        }
+
+        .description {
+          font-size: 0.9rem;
+          color: #7f8c8d;
+          margin-top: 0.3rem;
+        }
+      }
+
+      .actions {
+        button {
+          background: transparent;
+          border: none;
+          color: #e74c3c;
+          cursor: pointer;
+          font-weight: 600;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #c0392b;
+          }
+        }
+      }
+    }
+  }
+}
