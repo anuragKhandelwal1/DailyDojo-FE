@@ -35,7 +35,7 @@ export class LoginComponent {
         next: (res) => {
           this.showMessage('Logged In!')
           localStorage.setItem('token', res.access_token);
-          this.router.navigate(['/dashboard']); // or your desired route
+          this.router.navigate(['/habits']); // or your desired route
         },
         error: () => {
           this.showMessage('Something went wrong. Please try again.');
